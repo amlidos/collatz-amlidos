@@ -20,3 +20,4 @@ int main () {
     using namespace std;
     collatz_solve(cin, cout);
     return 0;}
+
