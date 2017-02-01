@@ -32,12 +32,12 @@ TEST(CollatzFixture, read_1) {
 TEST(CollatzFixture, read_2) {
     istringstream r("1\n");
     const int n = collatz_read(r);
-    ASSERT_EQ(10, n);}
+    ASSERT_EQ(1, n);}
 
 TEST(CollatzFixture, read_3) {
     istringstream r("100\n");
     const int n = collatz_read(r);
-    ASSERT_EQ(10, n);}
+    ASSERT_EQ(100, n);}
 
 // ----
 // eval

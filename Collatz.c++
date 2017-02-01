@@ -29,12 +29,35 @@ int collatz_read (istream& r) {
 // collatz_eval
 // ------------
 
-int collatz_eval (long long n) {
-    // <your code>
+int collatz_eval (int n) {
     assert(n > 0);
-    int m = n;
-    assert(m > 0);
-    return m;}
+    int m;
+    int count = 1;
+    int max = 1;
+    int ret = 0;
+   
+    for(int i = 1; i <= n; ++i)
+    {
+        m = i;
+        while(m > 1)
+        {
+            if(m % 2 == 0)
+                m /= 2;
+            else
+                m = 3*m+1;
+            ++count;
+        }
+        if(count >= max)
+        {
+            max = count;
+            ret = i;
+        }
+        count = 1;
+    }
+    assert(ret > 0);
+    assert(ret <= n);
+    return ret;
+}
 
 // -------------
 // collatz_print
