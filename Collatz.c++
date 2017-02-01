@@ -36,20 +36,36 @@ int collatz_eval (long long n) {
     int max = 1;
     int ret = 0;
    
+    int eagerCache[n];
+    for(int i = 0; i < n; ++i)
+    {
+        eagerCache[i] = -1;   
+    }
+    eagerCache[0] = 1;
+
     for(int i = 1; i <= n; ++i)
     {
         m = i;
         while(m > 1)
         {
-            if(m % 2 == 0)
-                m /= 2;
-            else
+            if(m < n && eagerCache[m-1] != -1 )
             {
-                m = (3*m+1)/2;
+                count += eagerCache[m-1]-1;
+                m = 1;
+            }
+            if(m != 1)
+            {
+                if(m % 2 == 0)
+                    m /= 2;
+                else
+                {
+                    m = (3*m+1)/2;
+                    ++count;
+                }
                 ++count;
             }
-            ++count;
         }
+        eagerCache[i-1] = count;
         if(count >= max)
         {
             max = count;
