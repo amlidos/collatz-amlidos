@@ -44,7 +44,10 @@ int collatz_eval (long long n) {
             if(m % 2 == 0)
                 m /= 2;
             else
-                m = 3*m+1;
+            {
+                m = (3*m+1)/2;
+                ++count;
+            }
             ++count;
         }
         if(count >= max)
@@ -53,7 +56,7 @@ int collatz_eval (long long n) {
             ret = i;
         }
         count = 1;
-    }
+    }    
     assert(ret > 0);
     assert(ret <= n);
     return ret;
