@@ -1,0 +1,77 @@
+commit eed2292dba4dcfdcf77874d1ba84d643a63b071b
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Tue Jan 31 19:17:16 2017 -0600
+
+    formatted with clang
+
+commit aaef892d0049581a25b8848fc724408faed0b3f3
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Tue Jan 31 19:08:57 2017 -0600
+
+    making variable names more readable
+
+commit bf932adeb0d78728b42a4998eec4274df93e20e2
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Tue Jan 31 18:55:28 2017 -0600
+
+    Implemented the meta cache, close #12
+
+commit 29d099e7af7d5cb598041599d8a524855fa61774
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Tue Jan 31 18:50:59 2017 -0600
+
+    Implemented eager cache, fixed #15
+
+commit e70159949f02b77d9e9d3bc9c05e67a50bb19562
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Tue Jan 31 18:46:43 2017 -0600
+
+    implemented (3*n+1)/2 optimization, close #13
+
+commit 063165e8d7641632a0bc45e02948722158602106
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Tue Jan 31 18:40:30 2017 -0600
+
+    fixed recipe for target 'TestCollatz' failed, close #14
+
+commit f9610989b9c8a89259403c3400c5b55b209949ad
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Tue Jan 31 18:32:58 2017 -0600
+
+    implemented simplist possible solution, close #8
+
+commit 890e5e3be78304c3d86428e084ddefbe3897a2bf
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Tue Jan 31 18:25:57 2017 -0600
+
+    wrote unit and acceptance tests
+
+commit f9a098ace677c1aecd44533bf3d3d897eca3613b
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Tue Jan 31 18:05:46 2017 -0600
+
+    fixing the given unit and acceptance tests, close #7
+
+commit d835adf62a8584b17a497e881b0494dac2fda424
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Tue Jan 31 18:00:53 2017 -0600
+
+    triggering Travis CI with a subsequent build
+
+commit 1b542ee0d08916eadec4a1ec51c566042f5134e4
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Tue Jan 31 17:54:40 2017 -0600
+
+    connecting newly created dev branch to Travis CI, close #4, #5, #6
+
+commit 0839d9a45cd449885c5e193c8eb4eb69e373c769
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Tue Jan 31 17:47:09 2017 -0600
+
+    copied code from the public repo to the private repo, close #3
+
+commit 4bb97033e51056cdbd2077f5dd4662b1b400c7ff
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Tue Jan 31 16:58:58 2017 -0600
+
+    :confetti_ball: Added .gitattributes & .gitignore files
