@@ -29,7 +29,7 @@ int collatz_read (istream& r) {
 // collatz_eval
 // ------------
 
-int collatz_eval (int n) {
+int collatz_eval (long long n) {
     assert(n > 0);
     int m;
     int count = 1;
