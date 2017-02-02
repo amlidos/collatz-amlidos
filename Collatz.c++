@@ -45,24 +45,24 @@ int collatz_eval(long long n) {
       17647,   17673,   23529,  26623,  34239,  35497,  35655,  52527,  77031,
       106239,  142587,  156159, 216367, 230631, 410011, 511935, 910107, 1676703,
       3030267, 3974407, 4484223};
-  if (n < 4484223) {
+  if (n < 5000000) {
     for (int i = 0; i < n - 1; ++i) {
       if (n >= metaCache[i] && n < metaCache[i + 1])
         return metaCache[i];
     }
   }
 
-  int *eagerCache = new int[n];
+  int *lazyCache = new int[n];
   for (int i = 0; i < n; ++i) {
-    eagerCache[i] = -1;
+    lazyCache[i] = -1;
   }
-  eagerCache[0] = 1;
+  lazyCache[0] = 1;
 
   for (int i = 1; i <= n; ++i) {
     m = i;
     while (m > 1) {
-      if (m < n && eagerCache[m - 1] != -1) {
-        count += eagerCache[m - 1] - 1;
+      if (m < n && lazyCache[m - 1] != -1) {
+        count += lazyCache[m - 1] - 1;
         m = 1;
       }
       if (m != 1) {
@@ -75,7 +75,7 @@ int collatz_eval(long long n) {
         ++count;
       }
     }
-    eagerCache[i - 1] = count;
+    lazyCache[i - 1] = count;
     if (count >= max) {
       max = count;
       ret = i;
@@ -84,7 +84,7 @@ int collatz_eval(long long n) {
   }
   assert(ret > 0);
   assert(ret <= n);
-  delete[] eagerCache;
+  delete[] lazyCache;
   return ret;
 }
 
