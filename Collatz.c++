@@ -32,9 +32,9 @@ int collatz_read(istream &r) {
 
 int collatz_eval(long long n) {
   assert(n > 0);
-  int m;
-  int count = 1;
-  int max = 1;
+  long long m;
+  long long count = 1;
+  long long max = 1;
   int ret = 0;
 
   int metaCache[] = {
@@ -45,24 +45,24 @@ int collatz_eval(long long n) {
       17647,   17673,   23529,  26623,  34239,  35497,  35655,  52527,  77031,
       106239,  142587,  156159, 216367, 230631, 410011, 511935, 910107, 1676703,
       3030267, 3974407, 4484223};
-  if (n < 5000000) {                  //references the meta cache in order to save ops when the number is less than 5,000,000 as it is already
-    for (int i = 0; i < n - 1; ++i) { //calculated beforehand
+  if (n < 5000000) {
+    for (int i = 0; i < (int)sizeof(metaCache) - 1; ++i) {
       if (n >= metaCache[i] && n < metaCache[i + 1])
         return metaCache[i];
     }
   }
 
-  int *lazyCache = new int[n]; //the lazy cache I've made is populated with -1s as sequence length !< 1
-  for (int i = 0; i < n; ++i) {
+  long long *lazyCache = new long long[n];
+  for (long long i = 0; i < n; ++i) {
     lazyCache[i] = -1;
   }
   lazyCache[0] = 1;
 
-  for (int i = 1; i <= n; ++i) {
+  for (long long i = 1; i <= n; ++i) {
     m = i;
     while (m > 1) {
-      if (m < n && lazyCache[m - 1] != -1) { //if the lazy cache gets a hit then it adds the sequence lengths
-        count += lazyCache[m - 1] - 1;       //and sets m to 1 to avoid further evaluation
+      if (m < n && lazyCache[m - 1] != -1) {
+        count += lazyCache[m - 1] - 1;
         m = 1;
       }
       if (m != 1) {
@@ -75,16 +75,17 @@ int collatz_eval(long long n) {
         ++count;
       }
     }
-    lazyCache[i - 1] = count;       //saves value in cache
+    lazyCache[i - 1] = count;
     if (count >= max) {
-      max = count;                  //if a new max is found then set ret to be the current number being evaluated
+      max = count;
       ret = i;
     }
-    count = 1;  
+    count = 1;
   }
   assert(ret > 0);
   assert(ret <= n);
   delete[] lazyCache;
+  // cout<<"test: "<<ret<<endl;
   return ret;
 }
 

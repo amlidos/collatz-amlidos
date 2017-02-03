@@ -1,3 +1,63 @@
+commit dc437bc1b6a8ea0d9f48f68b914aa18abed8c3ee
+Author: Christopher Gonzalez <amlidoscg@gmail.com>
+Date:   Thu Feb 2 12:45:46 2017 -0600
+
+    added some comments, needs to be clang formatted
+
+commit a43cfb56ae4a33c80f2f3cca2ea70f1426c8e68a
+Author: Christopher Gonzalez <amlidoscg@gmail.com>
+Date:   Thu Feb 2 12:38:57 2017 -0600
+
+    changing name of eagerCache->lazyCache (misnomer)
+
+commit 90fe82359fb7419e0cf3848494207f5ce0aa6fed
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Wed Feb 1 17:16:20 2017 -0600
+
+    even better acceptance tests
+
+commit f5fc379320b5baf1edf9241b19bacd45cd50cc64
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Wed Feb 1 17:02:29 2017 -0600
+
+    Better acceptance tests, Travis CI Log
+
+commit 181949733d2f424590a4d27d665b99de67ee2284
+Merge: 488595f a8b8c95
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Wed Feb 1 16:30:15 2017 -0600
+
+    Merge branch 'master' of https://github.com/amlidos/collatz-amlidos
+
+commit 488595fa735cecd2ab94892a21364302f339087d
+Merge: c8bd581 6e831a6
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Wed Feb 1 16:30:04 2017 -0600
+
+    Merge remote-tracking branch 'refs/remotes/origin/dev'
+
+commit 6e831a615e67331cf205c15ce363e690a8821239
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Wed Feb 1 16:29:39 2017 -0600
+
+    fixing meta cache values
+
+commit a8b8c95a0403d5f14ca47eda583f49c792bc0ce3
+Merge: 0839d9a eed2292
+Author: Christopher Gonzalez <amlidoscg@gmail.com>
+Date:   Tue Jan 31 19:38:58 2017 -0600
+
+    Merge pull request #16 from amlidos/dev
+    
+    Dev
+
+commit c8bd581e55be011c100d5a0f813115ec1cff9ff0
+Merge: 0839d9a eed2292
+Author: amlidos <amlidoscg@gmail.com>
+Date:   Tue Jan 31 19:20:48 2017 -0600
+
+    Merge remote-tracking branch 'refs/remotes/origin/dev'
+
 commit eed2292dba4dcfdcf77874d1ba84d643a63b071b
 Author: amlidos <amlidoscg@gmail.com>
 Date:   Tue Jan 31 19:17:16 2017 -0600
