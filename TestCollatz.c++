@@ -78,12 +78,12 @@ TEST(CollatzFixture, eval_6) {
 
 TEST(CollatzFixture, eval_7) {
   const int m = collatz_eval(3600000);
-  ASSERT_EQ(3030267, m);
+  ASSERT_EQ(3542887, m);
 }
 
 TEST(CollatzFixture, eval_8) {
   const int m = collatz_eval(3750000);
-  ASSERT_EQ(3030267, m);
+  ASSERT_EQ(3732423, m);
 }
 
 TEST(CollatzFixture, eval_9) {
